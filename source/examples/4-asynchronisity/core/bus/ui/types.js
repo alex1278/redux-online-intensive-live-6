@@ -1,0 +1,3 @@
+export const EMIT_ERROR = 'EMIT_ERROR';
+export const START_FETCHING = 'START_FETCHING';
+export const STOP_FETCHING = 'STOP_FETCHING';

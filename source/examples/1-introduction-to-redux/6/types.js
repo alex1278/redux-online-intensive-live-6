@@ -1,0 +1,2 @@
+export const REMOVE_POST_ASYNC = 'REMOVE_POST_ASYNC';
+export const REMOVE_POST = 'REMOVE_POST';
