@@ -1,0 +1,46 @@
+.starshipTile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #040404;
+    color: wheat;
+    border-radius: 7px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.3s ease;
+    max-width: 600px;
+
+    &:hover {
+        transform: translateY(-3px);
+    }
+
+    & h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        width: 70px;
+        height: 70px;
+        align-self: flex-start;
+        margin: 0 30px 0 0;
+        border: 2px solid wheat;
+        border-radius: 10px;
+    }
+
+    & .description {
+        & div {
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            & span {
+                &:first-child {
+                    font-weight: 800;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+.bridge {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 35px;
+    min-height: 100vh;
+    background-color: #16161a;
+    color: wheat;
+
+    & h1 {
+        margin-bottom: 50px;
+        text-align: center;
+        user-select: none;
+    }
+
+    & img {
+        width: 60%;
+        margin-bottom: 50px;
+        border-radius: 15px;
+        border-width: 2px;
+        border-style: solid;
+        border-color: black;
+        cursor: pointer;
+        transition: border-color 0.3s ease;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+
+        &:hover {
+            border-color: cornflowerblue;
+        }
+    }
+
+    & button {
+        min-width: 120px;
+        min-height: max-content;
+        background-color: transparent;
+        padding: 10px 7px;
+        color: wheat;
+        outline: 0;
+        border: 2px solid currentColor;
+        border-radius: 7px;
+        transition: color 0.3s ease;
+        cursor: pointer;
+        font-size: 22px;
+        font-weight: 700;
+
+        &:hover {
+            color: cornflowerblue;
+        }
+
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+}

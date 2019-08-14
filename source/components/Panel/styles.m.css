@@ -1,0 +1,41 @@
+.panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 15px;
+    min-height: 100vh;
+    background-color: #16161a;
+    color: wheat;
+
+    & h1 {
+        font-size: 50px;
+    }
+
+    & button {
+        min-width: 120px;
+        height: 35px;
+        background-color: transparent;
+        color: wheat;
+        outline: 0;
+        border: 2px solid currentColor;
+        border-radius: 7px;
+        transition: color 0.3s ease;
+        cursor: pointer;
+        font-size: 22px;
+        font-weight: 700;
+
+        &:hover {
+            color: cornflowerblue;
+        }
+
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+
+        &:disabled {
+            color: grey;
+            cursor: progress;
+        }
+    }
+}
