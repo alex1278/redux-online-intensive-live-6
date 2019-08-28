@@ -14,5 +14,5 @@ const router = connectRouter(history);
 export const rootReducer = combineReducers({
     feed,
     profile,
-    router
+    router,
 })

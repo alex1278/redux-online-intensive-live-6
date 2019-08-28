@@ -6,7 +6,7 @@ const initialState = {
     isFetching: false,
 };
 
-export const reducer = (state = initialState, { type, payload }) => {
+export const feedReducer = (state = initialState, { type, payload }) => {
     switch (type) {
         case types.START_FETCHING:
                 return {...state, isFetching: true};

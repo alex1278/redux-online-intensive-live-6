@@ -1,18 +1,18 @@
 // Core
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { push } from 'connected-react-router';
 
 // Instruments
 import Styles from './styles.m.css';
 import observatory from './observatory.jpg';
+import { book } from '../../routes/book';
 
+@connect(
+    (state) => ({ profile: state.profile }),
+    { push }
+)
 export class Bridge extends Component {
-    static defaultProps = {
-        profile: {
-            firstName: 'имя',
-            lastName:  'фамилия',
-        },
-    };
-
     render() {
         const { profile } = this.props;
 

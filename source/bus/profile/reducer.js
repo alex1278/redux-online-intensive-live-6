@@ -7,7 +7,7 @@ const initialState = {
     isFetching: false,
 };
 
-export const reducer = (state = initialState, { type, payload }) => {
+export const profileReducer = (state = initialState, { type, payload }) => {
     switch (type) {
         case types.FILL_PROFILE:
             return {...state, ...payload};
