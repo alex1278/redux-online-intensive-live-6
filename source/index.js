@@ -11,11 +11,15 @@ import { history } from './init/middleware';
 // Routes
 import { Routes } from './routes';
 
+// Components
+import { Component } from './exampleWithUseReducer';
+
 render(
-    <Provider store = { store }>
-        <Router history = { history }>
-            <Routes />
-        </Router>
-    </Provider>,
+    // <Provider store = { store }>
+    //     <Router history = { history }>
+    //         <Routes />
+    //     </Router>
+    // </Provider>,
+    <Component />,
     document.getElementById('app'),
 );
