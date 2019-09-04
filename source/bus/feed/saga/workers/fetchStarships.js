@@ -1,6 +1,5 @@
 // Core
-import { put, call } from 'redux-saga/effects';
-import { delay } from 'redux-saga';
+import { put, call, delay } from 'redux-saga/effects';
 
 // Instruments
 import { feedActions } from '../../actions';

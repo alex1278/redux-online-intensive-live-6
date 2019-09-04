@@ -53,7 +53,7 @@ export const loadDevelopmentCss = () => ({
                     {
                         loader:  'style-loader',
                         options: {
-                            sourceMap: true,
+                            injectType: 'styleTag'
                         },
                     },
                     {

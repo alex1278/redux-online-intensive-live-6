@@ -11,15 +11,11 @@ import { history } from './init/middleware';
 // Routes
 import { Routes } from './routes';
 
-// Components
-import { Bridge, Profile, Panel } from './components';
-
 render(
     <Provider store = { store }>
-        <Panel />
-        {/* <Router history = { history }> */}
-            {/* <Routes /> */}
-        {/* </Router> */}
+        <Router history = { history }>
+            <Routes />
+        </Router>
     </Provider>,
     document.getElementById('app'),
 );
