@@ -3,4 +3,5 @@ export const book = Object.freeze({
     profile:  '/profile',
     panel:    '/panel',
     starship: '/panel/:starship',
+    registration:  '/registration',
 });

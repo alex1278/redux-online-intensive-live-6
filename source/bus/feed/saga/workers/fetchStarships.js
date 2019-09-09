@@ -16,7 +16,7 @@ export function* fetchStarships () {
             throw new Error(`We can't receive starships 😢`);
         }
 
-        yield delay(2000);
+        yield delay(200);
         yield put(feedActions.fillStarships(results));
     } catch (error) {
         console.log('fetchStarshipsAsync', error);

@@ -1,15 +1,33 @@
 // Core
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { createMatchSelector } from 'connected-react-router';
+import { book } from '../../routes/book';
 
 // Instruments
 import Styles from './styles.m.css';
 
 export const Starship = () => {
-    const dispatch = useDispatch();
     const starships = useSelector((state) => state.feed.starships);
+    const matchSelector = createMatchSelector({ path: book.starship });
+    const state = useSelector((state) => state);
+    const match = matchSelector(state);
+
+    if(!match) {
+        return false;
+    }
+
+    const starshipName = match.params.starship;
 
     if(!starships.length) {
+        return false;
+    }
+
+    const starship = starships.find((starship) => {
+        return starship.name.replace(/ /g, '-').toLowerCase() === starshipName;
+    });
+
+    if(!starship) {
         return false;
     }
 
@@ -18,7 +36,7 @@ export const Starship = () => {
         starship_class,
         manufacturer,
         crew
-    } = starships[0];
+    } = starship;
 
     return (
         <section

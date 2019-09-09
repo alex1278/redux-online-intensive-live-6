@@ -12,14 +12,13 @@ import { history } from './init/middleware';
 import { Routes } from './routes';
 
 // Components
-import { Component } from './exampleWithUseReducer';
+// import { Component } from './exampleWithUseReducer';
 
 render(
-    // <Provider store = { store }>
-    //     <Router history = { history }>
-    //         <Routes />
-    //     </Router>
-    // </Provider>,
-    <Component />,
+    <Provider store = { store }>
+        <Router history = { history }>
+            <Routes />
+        </Router>
+    </Provider>,
     document.getElementById('app'),
 );
