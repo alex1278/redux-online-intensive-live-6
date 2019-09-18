@@ -7,6 +7,7 @@ import {
     minLength,
     maxLength
  } from './validation';
+ import './styles.css';
 
 const RegistrationComponent = ({ handleSubmit }) => {
     return (
