@@ -13,7 +13,7 @@ export const profileReducer = (state = initialState, { type, payload }) => {
             return {...state, ...payload};
         
         case types.START_FETCHING:
-                return {...state, isFetching: true};
+            return {...state, isFetching: true};
                 
         case types.STOP_FETCHING:
             return {...state, isFetching: false};

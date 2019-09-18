@@ -8,11 +8,14 @@ const token = 'TEST_TOKEN';
 const error = new Error(errorMessage);
 
 const userProfile = {
-    id:        'TEST_ID',
-    avatar:    'TEST_AVATAR',
-    firstName: 'Walter',
-    lastName:  'White',
-    token,
+    firstName: 'Уолтер',
+    lastName: 'Уайт',
+    isFetching: false,
+};
+
+const feedState = {
+    starships: [],
+    isFetching: false,
 };
 
 const credentials = {
@@ -59,6 +62,7 @@ global.__ = {
     fetchResponseFail400,
     credentials,
     url,
+    feedState
 };
 global.fetch = fetch;
 global.localStorage = new LocalStorage();

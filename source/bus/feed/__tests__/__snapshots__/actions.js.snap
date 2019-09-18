@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`feed actions fetchStarshipsAsync 1`] = `
+Object {
+  "type": "FETCH_STARSHIPS_ASYNC",
+}
+`;
+
+exports[`feed actions fillStarships 1`] = `
+Object {
+  "payload": Array [],
+  "type": "FILL_STARSHIPS",
+}
+`;
+
+exports[`feed actions startFetching 1`] = `
+Object {
+  "type": "START_FETCHING",
+}
+`;
+
+exports[`feed actions stopFetching 1`] = `
+Object {
+  "type": "STOP_FETCHING",
+}
+`;
