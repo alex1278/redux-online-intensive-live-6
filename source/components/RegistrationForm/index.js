@@ -5,7 +5,9 @@ import { customInput, customSelect } from '../fields';
 import { 
     required,
     minLength,
-    maxLength
+    maxLength,
+    matchesPassword,
+    asyncValidate
  } from './validation';
  import './styles.css';
 
@@ -33,6 +35,20 @@ const RegistrationComponent = ({ handleSubmit }) => {
                 type="text"
                 validate={[required, minLength, maxLength]}
             />
+            <Field
+                name="password"
+                component={customInput}
+                label="Password"
+                type="password"
+                validate={[required]}
+            />
+            <Field
+                name="confirmPassword"
+                component={customInput}
+                label="Confirm Password"
+                type="password"
+                validate={[required, matchesPassword]}
+            />
             <button type="submit">Submit</button>
         </form>
     );
@@ -40,4 +56,6 @@ const RegistrationComponent = ({ handleSubmit }) => {
 
 export const RegistrationForm = reduxForm({
     form: 'registration',
+    asyncValidate,
+    asyncBlurFields: ['username']
 })(RegistrationComponent);
