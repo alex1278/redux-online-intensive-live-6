@@ -18,7 +18,7 @@
     "modulePaths": [ "<rootDir>/source", "<rootDir>/node_modules" ],
     "moduleFileExtensions": [ "js", "json", "css" ],
     "setupFiles": [ "<rootDir>/jest/scripts/setupFiles.js" ],
-    "setupTestFrameworkScriptFile": "<rootDir>/jest/scripts/setupEnzymeEnvironment.js",
+    "setupFilesAfterEnv": [ "<rootDir>/jest/scripts/setupEnzymeEnvironment.js" ],
     "snapshotSerializers": [ "enzyme-to-json/serializer" ],
     "moduleNameMapper": {
         "\\.(css|m.css)$": "identity-obj-proxy",
